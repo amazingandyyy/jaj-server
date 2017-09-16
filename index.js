@@ -5,17 +5,14 @@ var bodyParser = require('body-parser')
 
 app.use(bodyParser.json())
 
-app.get('/', function (req, response) {
-  response.send({
-    "usage1": "GET Request to /all to get a list of images",
-    "usage2": "GET Request to /{name} to get certain charater's image",
+app.get('/', function (req, res) {
+  res.send({
     "info": {
       "author": "amazingandyyy",
       "license": "MIT",
       "contact": "www.amazingandyyy.com",
-      "usage": "POST Request to /init/{token} to init the database",
       "version": "0.0.2",
-      "repo": "https://github.com/amazingandyyy/walking-dead-scraper"
+      "repo": "https://github.com/amazingandyyy/jaj-server"
     }
   });
 })
